@@ -37,4 +37,5 @@ app.get("/", (req, res) => {
 app.use(express.static("upload"))
 app.use("/requirment", requirmentRoute)
 app.use("/requirment1", requiment1Route)
+app.use('/.netlify/functions/api', requirmentRoute)
 module.exports.handler = serverless(app);
